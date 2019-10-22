@@ -63,7 +63,7 @@ export default function Profile() {
               icon="person-outline"
               autoCorrect={false}
               autoCapitalize="none"
-              placeholder="Nome completo"
+              placeholder="Nome Completo"
               returnKeyType="next"
               onSubmitEditing={() => emailRef.current.focus()}
               value={name}

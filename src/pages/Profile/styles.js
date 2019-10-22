@@ -1,7 +1,6 @@
 /* MODULES */
 import styled from 'styled-components/native';
 
-/* COMPONENTS */
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
@@ -28,6 +27,7 @@ export const Separator = styled.View`
 
 export const SubmitButton = styled(Button)`
   margin-top: 5px;
+  background: #3b9eff;
 `;
 export const LogoutButton = styled(Button)`
   margin-top: 10px;

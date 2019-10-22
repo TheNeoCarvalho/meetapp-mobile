@@ -54,7 +54,7 @@ export default function SignIn({ navigation }) {
             value={password}
             onChangeText={setPassword}
           />
-          <SubmitButton icon="send" loading={loading} onPress={handleSubmit}>
+          <SubmitButton loading={loading} onPress={handleSubmit}>
             Entrar
           </SubmitButton>
         </Form>

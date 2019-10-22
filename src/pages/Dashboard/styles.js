@@ -25,6 +25,7 @@ export const ContainerHeader = styled.View`
 
 export const ButtonDate = styled(RectButton)``;
 export const TextDate = styled.Text`
+  text-transform: uppercase;
   color: #fff;
   font-size: 24px;
   margin: 0 15px;

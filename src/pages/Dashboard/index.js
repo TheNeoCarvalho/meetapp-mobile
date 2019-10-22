@@ -36,9 +36,13 @@ export default function Dashboard() {
         const response = await api.get('meetapps', { params: { date } });
         const data = response.data.map(m => ({
           ...m,
-          formattedDate: format(parseISO(m.date), "hh'h'mm 'de' MMMM", {
-            locale: pt,
-          }),
+          formattedDate: format(
+            parseISO(m.date),
+            "d' de ' MMMM', às ' hh'h'mm",
+            {
+              locale: pt,
+            }
+          ),
         }));
         setMeetapps(data);
       } catch (e) {
@@ -112,8 +116,7 @@ export default function Dashboard() {
               keyExtractor={item => String(item)}
               renderItem={() => (
                 <NoMeetapps>
-                  <Icon name="sentiment-dissatisfied" size={40} color="#fff" />
-                  <NoMeetappsText>Nenhum meetapp este mês</NoMeetappsText>
+                  <NoMeetappsText>Nenhum meetapp este mês!</NoMeetappsText>
                 </NoMeetapps>
               )}
               onRefresh={handleRefresh}

@@ -37,9 +37,13 @@ export default function Subscriptions() {
         console.tron.log(response);
         const data = response.data.map(m => ({
           ...m,
-          formattedDate: format(parseISO(m.date), "hh'h'mm 'de' MMMM", {
-            locale: pt,
-          }),
+          formattedDate: format(
+            parseISO(m.date),
+            "d ' de 'MMMM', às 'hh'h'mm",
+            {
+              locale: pt,
+            }
+          ),
         }));
         setMeetapps(data);
       } catch (e) {
@@ -113,7 +117,6 @@ export default function Subscriptions() {
               keyExtractor={item => String(item)}
               renderItem={() => (
                 <NoMeetapps>
-                  <Icon name="sentiment-dissatisfied" size={40} color="#fff" />
                   <NoMeetappsText>Nenhum meetapp este mês</NoMeetappsText>
                 </NoMeetapps>
               )}

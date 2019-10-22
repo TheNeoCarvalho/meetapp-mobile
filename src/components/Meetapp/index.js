@@ -39,7 +39,7 @@ export default function Meetapp({ data, handleSubscribe, handleUninscribe }) {
         </Info>
         <Info>
           <Icon name="person" size={15} color="#999" />
-          <InfoText>Organized by: {data.owner.name}</InfoText>
+          <InfoText>Organizado por: {data.owner.name}</InfoText>
         </Info>
         {!data.past &&
           (userId !== data.owner.id && (
@@ -47,11 +47,11 @@ export default function Meetapp({ data, handleSubscribe, handleUninscribe }) {
               {!data.past &&
                 (data.canSubscribe ? (
                   <SubmitButton icon="check" onPress={handleSubscribe}>
-                    Subcribe
+                    Inscrever-se
                   </SubmitButton>
                 ) : (
                   <SubmitButton icon="close" onPress={handleUninscribe}>
-                    Uninscribe
+                    Cancelar Inscricao
                   </SubmitButton>
                 ))}
             </ViewButtom>

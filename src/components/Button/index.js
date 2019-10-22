@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { Container, ButtonText, Text } from './styles';
 
-export default function Button({ children, loading, icon, ...rest }) {
+export default function Button({ children, loading, ...rest }) {
   return (
     <Container {...rest}>
       {loading ? (
@@ -13,7 +13,7 @@ export default function Button({ children, loading, icon, ...rest }) {
       ) : (
         <>
           <ButtonText>
-            <Icon name={icon} size={15} color="#fff" />
+            <Icon size={15} color="#fff" />
             <Text>{children}</Text>
           </ButtonText>
         </>
